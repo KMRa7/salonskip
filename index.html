@@ -98,23 +98,21 @@
         <label for="phone">電話番号</label> <!-- 電話番号入力フィールドのラベル -->
         <input type="tel" id="phone" placeholder="電話番号を入力してください"> <!-- 電話番号入力フィールド -->
 
-        <label>ご性別</label> <!-- ご来店回数のラベル -->
+        <label>ご来店回数</label> <!-- ご来店回数のラベル -->
         <div class="visit-buttons">
-            <button type="button" id="firstVisit" onclick="selectVisit(this)">男性</button> <!-- 初めて来店ボタン -->
-            <button type="button" id="repeatVisit" onclick="selectVisit(this)">女性</button> <!-- 2回目以降来店ボタン -->
+            <button type="button" id="firstVisit" onclick="selectVisit(this)">初めて</button> <!-- 初めて来店ボタン -->
+            <button type="button" id="repeatVisit" onclick="selectVisit(this)">2回目以降</button> <!-- 2回目以降来店ボタン -->
         </div>
 
         <label>メニューをお選びください</label>
         <div class="menu-sections">
-            <button type="button" onclick="showMenu('male')">脱毛男性メニュー</button>
-            <button type="button" onclick="showMenu('female')">脱毛女性メニュー</button>
-            <button type="button" onclick="showMenu('kids')">脱毛子供メニュー</button>
-            <button type="button" onclick="showMenu('aesthetic')">エステメニュー</button>
-            <button type="button" onclick="showMenu('whitening')">ホワイトニングメニュー</button>
+            <button type="button" onclick="showMenu('matuge')">♦︎まつげメニュー♦︎</button>
+            <button type="button" onclick="showMenu('datumo')">♦︎脱毛♦︎</button>
+            <button type="button" onclick="showMenu('matugesonota')">♦︎その他まつげメニュー（まつげ・メイク）♦︎</button>
         </div>
 
-        <div id="male" class="menu-section">
-            <label>◆脱毛メニュー◆<br><br>---男性限定---</label>
+        <div id="matuge" class="menu-section">
+            <label>♦︎まつげメニュー♦︎</label>
             <div class="symptoms">
                 <button type="button" onclick="selectSymptom(this)">【脱毛】全顔</button>
                 <button type="button" onclick="selectSymptom(this)">【脱毛】鼻下と口下</button>
@@ -125,27 +123,15 @@
             </div>
         </div>
 
-        <div id="female" class="menu-section">
-            <label>◆脱毛メニュー◆<br><br>---女性限定---</label>
+        <div id="datumo" class="menu-section">
+            <label>◆脱毛メニュー◆</label>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this)">全身(顔+VIOあり)</button>
-                <button type="button" onclick="selectSymptom(this)">全身(顔+VIOなし)</button>
-                <button type="button" onclick="selectSymptom(this)">お好きなパーツ3箇所</button>
-                <button type="button" onclick="selectSymptom(this)">お好きなパーツ5箇所</button>
-                <button type="button" onclick="selectSymptom(this)">お顔かVIO</button>
-                <button type="button" onclick="selectSymptom(this)">お顔とVIO</button>
+            <button type="button" onclick="showMenu('datumo-1')">【ご新規様】まゆ毛WAX※Mensは紹介のみ</button>
+            <button type="button" onclick="showMenu('datumo-2')">【2回目以降】まゆげWAX</button>
+            <button type="button" onclick="showMenu('datumo-3')">フェイシャルWAX(パック付き)</button>
             </div>
         </div>
-
-        <div id="kids" class="menu-section">
-            <label>◆脱毛メニュー◆<br><br>---子供限定---</label>
-            <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this)">ワキ(子供)</button>
-                <button type="button" onclick="selectSymptom(this)">お顔(子供)</button>
-                <button type="button" onclick="selectSymptom(this)">お好きなパーツ3箇所(子供)</button>
-            </div>
-        </div>
-        
+       
         <div id="aesthetic" class="menu-section">
             <label>◆エステメニュー◆</label>
             <div class="symptoms">
@@ -159,17 +145,41 @@
             </div>
         </div>
 
-        <div id="whitening" class="menu-section">
-            <label>◆ホワイトニングメニュー◆</label>
-            <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this)">ホワイトニング都度払い</button>
-                <button type="button" onclick="selectSymptom(this)">ホワイトニング学割U24</button>
-                <button type="button" onclick="selectSymptom(this)">ホワイトニングプレミアムコース</button>
-                <button type="button" onclick="selectSymptom(this)">ホワイトニング5回券</button>
-                <button type="button" onclick="selectSymptom(this)">ホワイトニング8回券</button>
-                <button type="button" onclick="selectSymptom(this)">ホワイトニング12回券</button>
+        <div id="datumo-1" class="menu-section">
+            <label>メニューをお選びください</label>
+            <div class="menu-sections">
+                <button type="button" onclick="selectSymptom(this)">【オプション】部分WAX：おでこ</button>
+                <button type="button" onclick="selectSymptom(this)">【オプション】部分WAX：もみあげ</button>
+                <button type="button" onclick="selectSymptom(this)">【オプション】部分WAX：鼻まわり</button>
+                <button type="button" onclick="selectSymptom(this)">【オプション】部分WAX：口まわり</button>
+                <button type="button" onclick="selectSymptom(this)">【オプション】部分WAX：鼻毛</button>
             </div>
         </div>
+
+        <div id="datumo-2" class="menu-section">
+            <label>メニューをお選びください</label>
+            <div class="menu-sections">
+                <button type="button" onclick="selectSymptom(this)">【オプション】部分WAX：おでこ</button>
+                <button type="button" onclick="selectSymptom(this)">【オプション】部分WAX：もみあげ</button>
+                <button type="button" onclick="selectSymptom(this)">【オプション】部分WAX：鼻まわり</button>
+                <button type="button" onclick="selectSymptom(this)">【オプション】部分WAX：口まわり</button>
+                <button type="button" onclick="selectSymptom(this)">【オプション】部分WAX：鼻毛</button>
+            </div>
+        </div>
+
+
+        <div id="datumo-3" class="menu-section">
+            <label>メニューをお選びください</label>
+            <div class="menu-sections">
+                <button type="button" onclick="selectSymptom(this)">【オプション】部分WAX：おでこ</button>
+                <button type="button" onclick="selectSymptom(this)">【オプション】部分WAX：もみあげ</button>
+                <button type="button" onclick="selectSymptom(this)">【オプション】部分WAX：鼻まわり</button>
+                <button type="button" onclick="selectSymptom(this)">【オプション】部分WAX：口まわり</button>
+                <button type="button" onclick="selectSymptom(this)">【オプション】部分WAX：鼻毛</button>
+            </div>
+        </div>
+
+
 
         <label for="date1">第1希望日※必須<br>希望時間は30分単位でお願いします</label> <!-- 第1希望日時のラベル -->
         <input type="datetime-local" id="date1" placeholder="タップして日時を入力"> <!-- 第1希望日時入力フィールド -->
